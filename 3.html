@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Задание 3</title>
+	<meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+            function kop() {
+	var okn1 = document.getElementById('okn1');
+    var okn2 = document.getElementById('okn2');
+	if (okn1.value =='') {
+		alert("Введите текст в первое поле!");
+	}
+	else {
+        okn2.value = okn1.value;
+	}
+}
+function str(){
+	okn1 = document.getElementById('okn1'); 
+	okn1.value='';
+	okn2 = document.getElementById('okn2');
+	okn2.value = '';
+}
+        </script>
+        <input type="button" name = "kop" onclick="kop()" value="Cкопировать">
+        <input type="button" name = "str" onclick="str()" value="Стереть">
+        <input type="textarea" id="okn1">
+        <input type="textarea" id="okn2" disabled>
+	</div>
+</body>
+</html>

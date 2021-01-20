@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Задание 4</title>
+	<meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+           function table() {
+	let a = document.getElementById('strk').value;
+	let	b = document.getElementById('stlb').value;
+	let	tbody = document.getElementById('form1');
+	if (a>=1,b>=1) {
+		tbody = document.getElementById('table');
+			for (i=0;i<a;i++) {
+				strk = document.createElement("tr");
+				for (j=0;j<b;j++) {
+					td1 = document.createElement("td");
+					td1.appendChild(document.createTextNode(Math.round(Math.random() * 10)));
+					strk.appendChild(td1);
+					tbody.appendChild(strk);
+				}
+			
+			}
+	}
+	else {
+		alert('Введите значения > 0	');
+	}
+    
+}
+        </script>
+        <form id="form1">
+            <input  id="strk" placeholder="Строки" type="number" style='width:50px'>
+            <input  id="stlb" placeholder="Столбцы" type="number" style='width:60px'>
+			<input type="button" id="create" value='Создать' onclick="table()">
+            <table id='table' ></table>
+        </form>
+</body>
+</html>

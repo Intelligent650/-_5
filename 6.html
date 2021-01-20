@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+<style>
+    body
+    {
+        height: 2200px;    
+    }
+    #vverh 
+    {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        opacity: 0;
+    } 
+    
+    
+    </style>
+</head>
+    
+<body>
+    <div id="vverh" onclick="goUp();"> < alt="ВВЕРХ"> </div> 
+    <script>
+           window.onscroll = function() 
+           {
+               var scrollElem = document.getElementById("vverh");
+               if (window.pageYOffset > document.documentElement.clientHeight) 
+               {
+                  scrollElem.style.opacity = "1";
+               } 
+               else 
+               {
+                   scrollElem.style.opacity = "0";
+               }
+           } 
+           var timeOut;
+           function goUp() 
+           {
+                window.scrollTo(0,0);
+           } 
+    </script>
+</body>
+
+</html>
